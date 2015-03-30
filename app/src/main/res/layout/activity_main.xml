@@ -1,0 +1,104 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:background="#FF52D3FF"
+        android:id="@+id/fl_guide_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--第三层：场景背景-->
+        <ImageView
+            android:id="@+id/iv_guide_bg_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/bg_guide_one" />
+
+        <ImageView
+            android:id="@+id/iv_guide_bg_2"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_guide_two" />
+
+        <ImageView
+            android:id="@+id/iv_guide_bg_3"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_guide_three" />
+
+        <ImageView
+            android:id="@+id/iv_guide_bg_4"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_guide_four" />
+        <!--
+         第二层：地球背景
+          -->
+            <View
+                android:visibility="gone"
+                android:id="@+id/v_earth_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"></View>
+        <!-- 第一层：人 -->
+        <ImageView
+            android:id="@+id/iv_guide_person_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_guide_person_one" />
+
+        <ImageView
+            android:id="@+id/iv_guide_person_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_guide_person_two" />
+
+        <ImageView
+            android:id="@+id/iv_guide_person_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_guide_person_three" />
+
+        <ImageView
+            android:id="@+id/iv_guide_person_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_guide_person_four" />
+
+    </FrameLayout>
+
+    <!-- 第0层：文字  -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <com.taobao.startupanim.ui.view.CirclePageIndicator
+        android:layout_gravity="bottom"
+        android:id="@+id/indicator"
+        android:padding="15dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent" />
+</merge>
